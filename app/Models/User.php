@@ -16,7 +16,6 @@ class User extends Authenticatable implements JWTSubject
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable, HasUlids;
 
-
     protected $keyType = 'string';
 
     public $incrementing = false;
@@ -35,6 +34,7 @@ class User extends Authenticatable implements JWTSubject
         'name',
         'email',
         'password',
+        'role',
     ];
 
     /**

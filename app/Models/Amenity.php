@@ -11,7 +11,7 @@ class Amenity extends BaseModel
 
     public function agent()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'agent_id');
     }
 
 }

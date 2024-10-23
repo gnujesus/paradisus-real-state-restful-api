@@ -23,7 +23,7 @@ return new class extends Migration {
             $table->decimal('price', 10, 2)->required();
             $table->enum('type', ['house', 'apartment', 'penthouse'])->required();
             $table->enum('status', ['on-sale', 'sold', 'building'])->required();
-            $table->foreignUlid('agent_id')->required();
+            $table->foreignUlid('agent_id')->references('id')->on('users')->required()->cascadeOnDelete();
             $table->timestamps();
         });
 

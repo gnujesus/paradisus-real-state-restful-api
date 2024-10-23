@@ -20,7 +20,7 @@ return new class extends Migration {
                 'min:3'
             ]);
             $table->text('description')->nullable();
-            $table->foreignUlid('agent_id')->required();
+            $table->foreignUlid('agent_id')->references('id')->on('users')->required()->cascadeOnDelete();
             $table->timestamps();
         });
 
