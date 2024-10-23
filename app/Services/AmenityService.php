@@ -2,13 +2,14 @@
 
 namespace App\Services;
 
-use App\Interfaces\IPropertyService;
+use \App\Models\Amenity;
+use \App\Interfaces\IAmenityService;
 use Illuminate\Support\Facades\Auth;
-use App\Interfaces\IPropertyRepository;
+use App\Repositories\AmenityRepository;
 
-class PropertyService extends GenericService implements IPropertyService
+class AmenityService extends GenericService implements IAmenityService
 {
-    public function __construct(IPropertyRepository $repository)
+    public function __construct(IAmenityRepository $repository)
     {
         parent::__construct($repository);
     }

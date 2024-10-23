@@ -10,3 +10,4 @@ Route::group(["prefix" => "auth", "middleware" => "api"], function ($router) {
     Route::post('refresh', [AuthController::class, 'refresh']);
     Route::post('me', [AuthController::class, 'me']);
 });
+

@@ -14,4 +14,15 @@ class Amenity extends BaseModel
         return $this->belongsTo(User::class, 'agent_id');
     }
 
+    public $rules = [
+        'name' => 'required',
+        'description' => 'required',
+    ];
+
+    public $fillable = [
+        'name',
+        'description',
+        'agent_id',
+    ];
+
 }
