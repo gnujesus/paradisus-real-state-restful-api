@@ -1,12 +1,12 @@
 # Paradisus Real Estate Restful API
 
-Welcome to the **Paradisus Real Estate Restful API**, a professional and secure RESTful API designed for Real Estate Agencies to efficiently manage property listings, user authentication, and transactions. This project utilizes Laravel with JWT (JSON Web Token) authorization via the `jwt-auth` package, ensuring that all interactions are securely authenticated.
+Welcome to the **Paradisus Real Estate Restful API**, a professional and secure RESTful API designed for Real Estate Agencies to efficiently manage property listings, user authentication, and transactions. This project utilizes Laravel with JWT (JSON Web Token) authorization via the [`jwt-auth`](https://jwt-auth.readthedocs.io/en/develop/) package, ensuring that all interactions are securely authenticated.
 
 ## Project Overview
 
 This API provides a comprehensive solution for managing properties in a real estate environment. It includes features such as property listings, updates, deletions, and secure user authentication.
 
-The current version of the API follows the **Service Oriented Programming** pattern and uses **PostgreSQL** as the database. Future plans include moving to **Clean Architecture** to enhance scalability and maintainability for version 2.
+The current version of the API follows the **Service Oriented Programming** pattern and uses **PostgreSQL** as the database. Future plans include moving to **Clean Architecture** to enhance scalability and maintainability for version 2. The API adheres to the [JSON:API](https://jsonapi.org/) specification for data structuring and communication.
 
 ## Features
 
