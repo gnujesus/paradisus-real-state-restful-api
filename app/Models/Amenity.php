@@ -14,7 +14,7 @@ class Amenity extends BaseModel
         return $this->belongsTo(User::class, 'agent_id');
     }
 
-    public $rules = [
+    public static $rules = [
         'name' => 'required',
         'description' => 'required',
     ];

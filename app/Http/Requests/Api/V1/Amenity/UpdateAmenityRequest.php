@@ -11,7 +11,7 @@ class UpdateAmenityRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,8 +21,18 @@ class UpdateAmenityRequest extends FormRequest
      */
     public function rules(): array
     {
+        $method = $this->method();
+
+        if ($method == "PUT") {
+            return [
+                'data.attributes.name' => 'required',
+                'data.attributes.description' => 'required',
+            ];
+        }
+
         return [
-            //
+            'data.attributes.name' => ['sometimes', 'required'],
+            'data.attributes.description' => ['sometimes', 'required'],
         ];
     }
 }

@@ -1,3 +1,5 @@
+
+
 # Paradisus Real Estate Restful API
 
 Welcome to the **Paradisus Real Estate Restful API**, a professional and secure RESTful API designed for Real Estate Agencies to efficiently manage property listings, user authentication, and transactions. This project utilizes Laravel with JWT (JSON Web Token) authorization via the [`jwt-auth`](https://jwt-auth.readthedocs.io/en/develop/) package, ensuring that all interactions are securely authenticated.
@@ -6,12 +8,13 @@ Welcome to the **Paradisus Real Estate Restful API**, a professional and secure 
 
 This API provides a comprehensive solution for managing properties in a real estate environment. It includes features such as property listings, updates, deletions, and secure user authentication.
 
-The current version of the API follows the **Service Oriented Programming** pattern and uses **PostgreSQL** as the database. Future plans include moving to **Clean Architecture** to enhance scalability and maintainability for version 2. The API adheres to the [JSON:API](https://jsonapi.org/) specification for data structuring and communication.
+The current version of the API implements **Clean Architecture**, ensuring maintainability and scalability. The project continues to follow the **Service Oriented Programming** pattern and uses **PostgreSQL** as the database. The API adheres to the [JSON:API](https://jsonapi.org/) specification for data structuring and communication.
 
 ## Features
 
 - JWT-based user authentication
-- Full CRUD operations for property management
+- Full CRUD operations for property management and amenities
+- Clean Architecture implemented for maintainability and scalability
 - Secure and scalable architecture (Service Oriented Programming)
 - Designed for easy integration with Real Estate Agency systems
 
@@ -106,10 +109,16 @@ The current version of the API follows the **Service Oriented Programming** patt
 | GET      | api/v1/properties/{property}          | Show a specific property                         |
 | PUT      | api/v1/properties/{property}          | Update a property                                |
 | DELETE   | api/v1/properties/{property}          | Delete a property                                |
+| GET      | api/v1/amenities                      | List all amenities                               |
+| GET      | api/v1/amenities/{id}                 | Show a specific amenity                          |
+| POST     | api/v1/amenities                      | Add a new amenity                                |
+| PUT      | api/v1/amenities/{id}                 | Update an amenity                                |
+| PATCH    | api/v1/amenities/{id}                 | Partially update an amenity                      |
+| DELETE   | api/v1/amenities/{id}                 | Delete an amenity                                |
 
 ## Future Plans
 
-This API is currently in **version 1**. For version 2, the API will adopt **Clean Architecture** to improve code maintainability, scalability, and modularity, ensuring a more robust and future-proof system.
+This API is currently in **version 1**. The API has already adopted **Clean Architecture** to improve code maintainability, scalability, and modularity, ensuring a robust and future-proof system.
 
 ## License
 

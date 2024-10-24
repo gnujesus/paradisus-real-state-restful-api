@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Infrastructure\Repositories;
 
 use \App\Models\Amenity;
 use Illuminate\Support\Facades\Auth;
-use App\Interfaces\IAmenityRepository;
-use \Illuminate\Http\Resources\Json\JsonResource;
+use App\Http\Resources\Api\V1\AmenityResource;
+use App\Application\Interfaces\IAmenityRepository;
 
 class AmenityRepository extends GenericRepository implements IAmenityRepository
 {

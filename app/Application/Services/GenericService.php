@@ -1,12 +1,10 @@
 <?php
 
-namespace App\Services;
+namespace App\Application\Services;
 
-use App\Models\Amenity;
-use App\Interfaces\IGenericService;
-use Illuminate\Support\Facades\Auth;
-use App\Interfaces\IGenericRepository;
-use Illuminate\Database\Eloquent\Model;
+use App\Application\Interfaces\IGenericService;
+use App\Application\Interfaces\IGenericRepository;
+
 
 abstract class GenericService implements IGenericService
 {

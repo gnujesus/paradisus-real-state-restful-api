@@ -2,16 +2,15 @@
 
 namespace App\Providers;
 
-use App\Http\Resources\Api\V1\AmenityResource;
-use App\Services\AmenityService;
-use App\Services\PropertyService;
-use App\Interfaces\IAmenityService;
-use App\Interfaces\IPropertyService;
-use App\Interfaces\IAmenityRepository;
-use App\Interfaces\IPropertyRepository;
-use App\Repositories\AmenityRepository;
 use Illuminate\Support\ServiceProvider;
-use App\Repositories\PropertyRepository;
+use App\Application\Services\AmenityService;
+use App\Application\Services\PropertyService;
+use App\Application\Interfaces\IAmenityService;
+use App\Application\Interfaces\IPropertyService;
+use App\Application\Interfaces\IAmenityRepository;
+use App\Application\Interfaces\IPropertyRepository;
+use App\Infrastructure\Repositories\AmenityRepository;
+use App\Infrastructure\Repositories\PropertyRepository;
 
 class AppServiceProvider extends ServiceProvider
 {

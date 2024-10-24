@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Services;
+namespace App\Application\Services;
 
-use App\Interfaces\IPropertyService;
 use Illuminate\Support\Facades\Auth;
-use App\Interfaces\IPropertyRepository;
+use App\Application\Services\GenericService;
+use App\Application\Interfaces\IPropertyRepository;
 
 class PropertyService extends GenericService implements IPropertyService
 {

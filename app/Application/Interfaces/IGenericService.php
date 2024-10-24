@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Interfaces;
+namespace App\Application\Interfaces;
 
-interface IAmenityService extends IGenericService
+interface IGenericService
 {
 
     function find(string $id);

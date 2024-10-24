@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Services;
+namespace App\Application\Services;
 
 use \App\Models\Amenity;
-use \App\Interfaces\IAmenityService;
 use Illuminate\Support\Facades\Auth;
-use App\Repositories\AmenityRepository;
+use App\Application\Interfaces\IAmenityService;
+use App\Application\Interfaces\IAmenityRepository;
 
 class AmenityService extends GenericService implements IAmenityService
 {

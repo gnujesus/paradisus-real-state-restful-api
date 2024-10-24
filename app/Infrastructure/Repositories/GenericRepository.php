@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Infrastructure\Repositories;
 
 use Illuminate\Support\Facades\Auth;
-use App\Interfaces\IGenericRepository;
+use App\Application\Interfaces\IGenericRepository;
 
 abstract class GenericRepository implements IGenericRepository
 {

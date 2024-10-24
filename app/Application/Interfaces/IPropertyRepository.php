@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Interfaces;
+namespace App\Application\Interfaces;
 
 interface IPropertyRepository extends IGenericRepository
 {
