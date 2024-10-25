@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\Amenity;
+use App\Policies\AmenityPolicy;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
 use App\Application\Services\AmenityService;
 use App\Application\Services\PropertyService;
@@ -36,6 +39,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        $modelPolicy = [
+            Amenity::class => AmenityPolicy::class,
+        ];
+
+        foreach ($modelPolicy as $modelClass => $policyClass)
+            Gate::policy($modelClass, $policyClass);
     }
 }

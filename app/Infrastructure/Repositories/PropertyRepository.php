@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Infrastructure\Repositories;
 
 use App\Models\Property;
 use Illuminate\Support\Facades\Auth;
-use App\Interfaces\IPropertyRepository;
 use App\Http\Resources\Api\V1\PropertyResource;
+use App\Application\Interfaces\IPropertyRepository;
 
 class PropertyRepository extends GenericRepository implements IPropertyRepository
 {

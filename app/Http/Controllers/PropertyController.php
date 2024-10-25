@@ -3,11 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Property;
-use Illuminate\Http\Request;
-use App\Services\PropertyService;
-use App\Interfaces\IGenericService;
-use App\Interfaces\IPropertyService;
+use Illuminate\Support\Facades\Gate;
 use App\Http\Resources\Api\V1\PropertyResource;
+use App\Application\Interfaces\IPropertyService;
 use App\Http\Requests\Api\V1\Property\StorePropertyRequest;
 use App\Http\Requests\Api\V1\Property\UpdatePropertyRequest;
 
@@ -25,6 +23,8 @@ class PropertyController extends Controller
 
     public function index()
     {
+        Gate::authorize('viewAny', Property::class);
+
         return PropertyResource::collection(Property::all());
     }
 
@@ -33,6 +33,9 @@ class PropertyController extends Controller
      */
     public function store(StorePropertyRequest $request)
     {
+
+        Gate::authorize('store', Property::class);
+
         return new PropertyResource($this->service->store($request->all()));
     }
 
@@ -41,6 +44,9 @@ class PropertyController extends Controller
      */
     public function show(string $id)
     {
+
+        Gate::authorize('viewAny', Property::class);
+
         return new PropertyResource($this->service->find($id));
     }
 
@@ -49,6 +55,8 @@ class PropertyController extends Controller
      */
     public function update(UpdatePropertyRequest $request, string $propertyId)
     {
+
+        Gate::authorize('viewAny', [Property::class, $this->service->find($propertyId)]);
 
         $data = $request->input('data.attributes');
 
@@ -60,8 +68,9 @@ class PropertyController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $propertyId)
     {
-        $this->service->delete($id);
+        Gate::authorize('destroy', [Property::class, $this->service->find($propertyId)]);
+        $this->service->delete($propertyId);
     }
 }
